@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://blog.duemir.net/blog/2013/04/18/re-blog/</loc>
+        <lastmod>2013-04-20T11:29:32+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.duemir.net/blog/archives/</loc>
+        <lastmod>2013-04-20T11:29:32+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.duemir.net/</loc>
+        <lastmod>2013-04-20T11:29:32+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.duemir.net/about/</loc>
+        <lastmod>2013-04-20T11:39:04+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.duemir.net/robots.txt</loc>
+        <lastmod>2013-04-19T13:55:53+10:00</lastmod>
+    </url>
+</urlset>
