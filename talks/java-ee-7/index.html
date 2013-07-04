@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Java EE 7 Overview</title>
+
+		<meta name="description" content="Presentation for Brisbane JVM User Group on Java EE 7">
+		<meta name="author" content="Denys Digtiar">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal/css/reveal.min.css">
+		<link rel="stylesheet" href="../reveal/css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="style.css"/>
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Java EE 7</h1>
+					<h3>Making developers' lives easier</h3>
+					<p>
+						<small>By <a href="http://duemir.net">Denys Digtiar</a> / <a href="http://twitter.com/duemir">@duemir</a></small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Platform in JSRs</h2>
+						<ul>
+							<li>14 JSRs
+								<ul>
+									<li>4 of them New</li>
+								</ul>
+							</li>
+							<li>9 Maintenance Releases</li>
+							<li>4 Pruned JSRs</li>
+						</ul>
+						<aside class="notes">
+							To give you some scope of the changes, Java EE 7 Platform comprise of 14 JSR and
+							9 Maintenance Releases.
+						</aside>
+					</section>
+					<section>
+						<h2>14 JSRs</h2>
+						<p>
+							<span class="jsr">Java Platform, Enterprise Edition 7 (<a href="http://jcp.org/en/jsr/detail?id=342">JSR 342</a>)</span>
+							<span class="jsr">Concurrency Utilities for Java EE 1.0 (<a href="http://jcp.org/en/jsr/detail?id=236">JSR 236</a>)</span>
+							<span class="jsr">Java Persistence 2.1 (<a href="http://jcp.org/en/jsr/detail?id=338">JSR 338</a>)</span>
+							<span class="jsr">JAX-RS: The Java API for RESTful Web Services 2.0 (<a href="http://jcp.org/en/jsr/detail?id=339">JSR 339</a>)</span>
+							<span class="jsr">Java Servlet 3.1 (<a href="http://jcp.org/en/jsr/detail?id=340">JSR
+								340</a>)</span>
+							<span class="jsr">Expression Language 3.0 (<a href="http://jcp.org/en/jsr/detail?id=341">JSR
+								341</a>)</span>
+							<span class="jsr">Java Message Service 2.0 (<a href="http://jcp.org/en/jsr/detail?id=343">JSR 343</a>)</span>
+							<span class="jsr">JavaServer Faces 2.2 (<a href="http://jcp.org/en/jsr/detail?id=344">JSR
+								344</a>)</span>
+							<span class="jsr">Enterprise JavaBeans 3.2 (<a href="http://jcp.org/en/jsr/detail?id=345">JSR
+								345</a>)</span>
+							<span class="jsr">Contexts and Dependency Injection for Java EE 1.1 (<a
+									href="http://jcp.org/en/jsr/detail?id=346">JSR 346</a>)</span>
+							<span class="jsr">Bean Validation 1.1 (<a href="http://jcp.org/en/jsr/detail?id=349">JSR
+								349</a>)</span>
+							<span class="jsr">Batch Applications for the Java Platform 1.0 (<a
+									href="http://jcp.org/en/jsr/detail?id=352">JSR 352</a>)</span>
+							<span class="jsr">Java API for JSON Processing 1.0 (<a
+									href="http://jcp.org/en/jsr/detail?id=353">JSR 353</a>)</span>
+							<span class="jsr">Java API for WebSocket 1.0 (<a href="http://jcp.org/en/jsr/detail?id=356">JSR
+								356</a>)</span>
+						</p>
+					</section>
+					<section>
+						<h2>9 Maintenance Releases</h2>
+						<p>
+							<span class="jsr">Web Services for Java EE 1.4 (<a
+									href="http://jcp.org/en/jsr/detail?id=109">JSR 109</a>)</span>
+							<span class="jsr">Java Authorization Service Provider Contract for Containers 1.5 (JACC 1.5) (<a
+									href="http://jcp.org/en/jsr/detail?id=115">JSR 115</a>)</span>
+							<span class="jsr">Java Authentication Service Provider Interface for Containers 1.1 (JASPIC 1.1) (<a
+									href="http://jcp.org/en/jsr/detail?id=196">JSR 196</a>)</span>
+							<span class="jsr">JavaServer Pages 2.3 (<a href="http://jcp.org/en/jsr/detail?id=245">JSR
+								245</a>)</span>
+							<span class="jsr">Common Annotations for the Java Platform 1.2 (<a
+									href="http://jcp.org/en/jsr/detail?id=250">JSR 250</a>)</span>
+							<span class="jsr">Interceptors 1.2 (<a href="http://jcp.org/en/jsr/detail?id=318">JSR
+								318</a>)</span>
+							<span class="jsr">Java EE Connector Architecture 1.7 (<a
+									href="http://jcp.org/en/jsr/detail?id=322">JSR 322</a>)</span>
+							<span class="jsr">Java Transaction API 1.2 (<a href="http://jcp.org/en/jsr/detail?id=907">JSR
+								907</a>)</span>
+							<span class="jsr">JavaMail 1.5 (<a href="http://jcp.org/en/jsr/detail?id=919">JSR 919</a>)</span>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>4+ pruned JSRs</h2>
+					<p>
+						<span class="jsr">Java EE Management (<a href="http://jcp.org/en/jsr/detail?id=77">JSR 77</a>)</span><br />
+						<span class="jsr">Application Deployment (<a href="http://jcp.org/en/jsr/detail?id=88">JSR
+							88</a>)</span><br />
+						<span class="jsr">JAXR for interfacing UDDI registries (<a
+								href="http://jcp.org/en/jsr/detail?id=93">JSR 93</a>)</span><br />
+						<span class="jsr">JAX-RPC (<a href="http://jcp.org/en/jsr/detail?id=101">JSR 101</a>)</span><br />
+						<span class="jsr">EJB 2.x Container Managed Persistence</span>
+					</p>
+					<aside class="notes">
+						Lets deal with deprecations first. Following JSRs are considered obsolete and are optional for
+						implementation by Application Server Vendors. They will be removed from the Java EE 8 spec.
+						Container Managed Persistence is also considered obsolete, but I guess there is no separate JSR
+						for it. I don't think I ever used any of this so I don't have much to say about them.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Show us some new APIs!!!</h2>
+					<p>
+						<span class="jsr">Java API for WebSocket 1.0 (<a href="http://jcp.org/en/jsr/detail?id=356">JSR
+							356</a>)</span><br />
+						<span class="jsr">Java API for JSON Processing 1.0 (<a
+								href="http://jcp.org/en/jsr/detail?id=353">JSR 353</a>)</span><br />
+						<span class="jsr">Batch Applications for the Java Platform 1.0 (<a
+								href="http://jcp.org/en/jsr/detail?id=352">JSR 352</a>)</span><br />
+						<span class="jsr">Concurrency Utilities for Java EE 1.0 (<a
+								href="http://jcp.org/en/jsr/detail?id=236">JSR 236</a>)</span>
+					</p>
+					<aside class="notes">
+						New APIs standardized in this release include WebSockets and JSON for modern web apps, Batch
+						for enterprisy stuff and Concurrency to bring some known Java SE multi-threading paradigms
+						into managed environment of application containers. I'll return to this APIs later.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Main Themes</h2>
+					<ul>
+						<li>HTML5</li>
+						<li>Developer Productivity</li>
+						<li>Meeting Enterprise Demand</li>
+					</ul>
+					<aside class="notes">
+						As Oracle put it in their Launch Event the main themes of these release are HTML5, Developer
+						Productivity and Meeting Enterprise Demand. Lets look at them closely.
+					</aside>
+				</section>
+
+				<section>
+					<h2>HTML5</h2>
+					<p>
+						<span class="jsr">Java API for WebSocket 1.0 (<a href="http://jcp.org/en/jsr/detail?id=356">JSR
+							356</a>)</span><br />
+						<span class="jsr">Java API for JSON Processing 1.0 (<a
+								href="http://jcp.org/en/jsr/detail?id=353">JSR 353</a>)</span>
+					</p>
+				</section>
+
+				<section>
+					<h3>Java API for WebSocket 1.0</h3>
+					<h4>Overview</h4>
+					<ul>
+						<li>Full support for creating WebSocket Endpoints
+							<ul>
+								<li>Client profile</li>
+								<li>Server profile</li>
+							</ul>
+						</li>
+						<li>2 approaches
+							<ul>
+								<li>Programmatic (Endpoint)</li>
+								<li>Annotation based (@ServerEndpoint, @ClientEndpoint)</li>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes">
+						References:
+						<ol>
+							<li><a href="http://vshow.on24.com/vshow/oraclejava">Java EE 7 Launch</a></li>
+							<li><a href="http://www.oracle.com/technetwork/articles/java/jsr356-1937161.html">JSR 356, Java API for WebSocket</a></li>
+							<li><a href="https://blogs.oracle.com/theaquarium/entry/an_overview_of_the_java1">An Overview of Java API for WebSocket</a></li>
+						</ol>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Java API for WebSocket 1.0</h3>
+					<h4>Main API classes (javax.websocket.*)</h4>
+					<ul>
+						<li><strong>Endpoint</strong> - Intercepts WebSocket lifecycle events
+							<ul>
+								<li>onOpen</li>
+								<li>onClose</li>
+								<li>onError</li>
+							</ul>
+						</li>
+						<li><strong>MessageHandler</strong> - Handles all incoming messages for an Endpoint</li>
+						<li><strong>RemoteEndpoint</strong> - Represents the 'other end' of this conversation</li>
+						<li><strong>Session</strong> - represent the active conversation</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Java API for WebSocket 1.0</h3>
+					<h4>Message Processing</h4>
+					<ul>
+						<li>Send or receive text and binary messages
+							<ul>
+								<li>As complete messages</li>
+								<li>As sequence of partial messages</li>
+								<li>Using traditional blocking I/O</li>
+							</ul>
+						</li>
+						<li>Send or receive WebSocket messages as any Java object
+							<ul>
+								<li>Using pluggable encoder/decoder components</li>
+								<li>Encoders and decoders for Java primitives built in</li>
+							</ul>
+						</li>
+						<li>Send messages synchronously or asynchronously</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h3>Java API for JSON Processing 1.0</h3>
+						<ul>
+							<li>Streaming API to produce/consume JSON
+								<ul>
+									<li>Low-level, efficient way to parse/generate JSON</li>
+									<li>Similar to StAX API in XML world</li>
+								</ul>
+							</li>
+							<li>Object model API to represent JSON
+								<ul>
+									<li>Simple, easy to use high-level API</li>
+									<li>Similar to DOM API in XML world</li>
+								</ul>
+							</li>
+						</ul>
+						<aside class="notes">
+							Not much to say. Finally JSON Processing was standardized.
+						</aside>
+					</section>
+
+					<section>
+						<h3>JAX-RS 2.0</h3>
+						<h4>What's new?</h4>
+						<ul>
+							<li>Client API</li>
+							<li>Filters & Interceptors</li>
+							<li>Asynchronous Processing</li>
+							<li>Hypermedia</li>
+							<li>... some other features</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Developer Productivity</h2>
+					<p>
+						<span class="jsr">Contexts and Dependency Injection for Java EE 1.1 (<a
+								href="http://jcp.org/en/jsr/detail?id=346">JSR 346</a>)</span><br />
+							<span class="jsr">Bean Validation 1.1 (<a href="http://jcp.org/en/jsr/detail?id=349">JSR
+								349</a>)</span><br />
+						<span class="jsr">Java Transaction API 1.2 (<a href="http://jcp.org/en/jsr/detail?id=907">JSR
+							907</a>)</span><br />
+						<span class="jsr">Java Message Service 2.0 (<a href="http://jcp.org/en/jsr/detail?id=343">JSR 343</a>)</span>
+					</p>
+				</section>
+
+				<section>
+					<h3>Contexts and Dependency Injection for Java EE 1.1</h3>
+					<ul>
+						<li>CDI is ON by default
+							<ul>
+								<li>"beans.xml" is optional</li>
+							</ul>
+						</li>
+						<li>Bean discovery mode
+							<ul>
+								<li>all</li>
+								<li>annotated</li>
+								<li>none</li>
+							</ul>
+						</li>
+						<li>@Vetoed</li>
+						<li>Global ordering/priority of interceptors and decorators</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Bean Validation 1.1</h3>
+					<ul>
+						<li>Dependency injection and CDI</li>
+						<li>Method Validation</li>
+						<li>Integration with JAX-RS</li>
+						<li>Error message using EL expressions</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Java Transaction API 1.2</h3>
+					<h4>Feature Summary</h4>
+					<ul>
+						<li>@Transactional: declarative transaction demarcation for CDI</li>
+						<li>@TransactionScoped: new CDI scope</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Java Message Service 2.0</h3>
+					<h4>Get More from Less</h4>
+					<ul>
+						<li>New JMSContext interface</li>
+						<li>AutoCloseable: JMSContext, Connection, Session,...</li>
+						<li>Use of runtime exceptions</li>
+						<li>Method chaining on JMSProducer</li>
+						<li>Simplified message sending</li>
+						<li>Default ConnectionFactory</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Java Message Service 2.0</h3>
+					<h4>Sending a Message using JMS 1.1</h4>
+					<pre><code class="java" data-trim contenteditable>
+@Resource(lookup = "jms/myConnectionFactory")
+ConnectionFactory connectionFactory;
+
+@Resource(lookup = "jms/myQueue")
+Queue myQueue;
+
+public void sendMessage(String payload) {
+    Connection connection = null;
+    try {
+        connection = connectionFactory.createConnection);
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        MessageProducer messageProducer = session.createProducer(myQueue);
+        TextMessage textMessage = session.createTextMessage(payload);
+        messageProducer.send(textMessage);
+    } catch (JMSException ex) {
+        // ...
+    } finally {
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (JMSException ex) { /* ... */ }
+        }
+    }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Java Message Service 2.0</h3>
+					<h4>Sending a Message using JMS 2.0</h4>
+					<pre><code class="java" data-trim contenteditable>
+@Resource(lookup = "jms/myConnectionFactory")
+ConnectionFactory connectionFactory;
+
+@Resource(lookup = "jms/myQueue")
+Queue myQueue;
+
+public void sendMessage(String payload) {
+    try (JMSContext context = connectionFactory.createContext();) {
+        context.createProducer().send(myQueue, payload);
+    }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Java Message Service 2.0</h3>
+					<h4>Sending a Message using JMS 2.0 and DI</h4>
+					<pre><code class="java" data-trim contenteditable>
+@Inject @JMSConnectionFactory(lookup = "jms/myConnectionFactory")
+JMSContext context;
+
+@Resource(lookup = "jms/myQueue")
+Queue myQueue;
+
+public void sendMessage(String payload) {
+    context.createProducer().send(myQueue, payload);
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Meeting Enterprise Demand</h2>
+					<p>
+						<span class="jsr">Concurrency Utilities for Java EE 1.0 (<a
+								href="http://jcp.org/en/jsr/detail?id=236">JSR 236</a>)</span><br />
+						<span class="jsr">Batch Applications for the Java Platform 1.0 (<a
+								href="http://jcp.org/en/jsr/detail?id=352">JSR 352</a>)</span><br />
+						<span class="jsr"></span>
+					</p>
+				</section>
+
+				<section>
+					<h3>Concurrency Utilities for Java EE 1.0</h3>
+					<h4>javax.enterprise.concurrent.*</h4>
+					<ul>
+						<li>Extension of Java SE Concurrency Utilities API</li>
+						<li>4 types of managed objects
+							<ul>
+								<li>ManagedExecutorService</li>
+								<li>ManagedScheduledExecutorService</li>
+								<li>ManagedThreadFactory</li>
+								<li>ContextService</li>
+							</ul>
+						</li>
+						<li>Context Propagation (classloading, JNDI, security)</li>
+						<li>Event Notification (ManagedTask, ManagedTaskListener)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Concurrency Utilities for Java EE 1.0</h3>
+					<pre><code class="java" data-trim contenteditable>
+class SomeBean {
+    @Resource    /*(name="java:comp/DefaultManagedExecutorService")*/
+    ManagedExecutorService executor;
+
+    public void execute() {
+        Future&lt;String&gt; result = executor.submit(new Callable&lt;String&gt;() {
+            // callable implementation here
+        });
+        // do something else
+    }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Batch Applications for the Java Platform 1.0</h3>
+					<h4>Feature Summary</h4>
+					<ul>
+						<li>Batch Programming Artifacts</li>
+						<li>Job Specification Language (JSL)</li>
+						<li>JobOperator Interface</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Batch Applications for the Java Platform 1.0</h3>
+					<h4>Batch Programming Artifact overview</h4>
+					<ul>
+						<li>Codifies key batch programming constructs
+							<ul>
+								<li>Reader, Processor, Writter, Batchlet, Listerens, PartionPlan, ...</li>
+								<li>Batch runtime orchestrates flow based on well known patterns, e.g chunked (Reader, Processor, Writer)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Batch Applications for the Java Platform 1.0</h3>
+					<h4>Job Specification Language (JSL)</h4>
+					<ul>
+						<li>XML document</li>
+						<li>Defines a "job"</li>
+						<li>"Scripts" batch execution sequence</li>
+						<li>"Step" oriented</li>
+						<li>Conditional step execution</li>
+						<li>Supports parameterization and substitution</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Batch Application for Java Platform 1.0</h3>
+					<h4>JobOperator Interface</h4>
+					<ul>
+						<li>Interface to the Batch Runtime</li>
+						<li>Defines operations to act on jobs
+							<ul>
+								<li>Start, stop, restart, job repository retrieval</li>
+							</ul>
+						</li>
+						<li>"The" interface for applications to interact with jobs</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What does the future hold for us?</h2>
+					<ul>
+						<li>JSON-B</li>
+						<li>JCache</li>
+						<li>NoSQL</li>
+						<li>Cloud (multi-tenancy, elasticity)</li>
+						<li>Jigsaw</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					// { src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// { src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../reveal/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,12 @@
+.jsr {
+    white-space: nowrap;
+    margin: 0 5px;
+}
+
+.jsr.existing {
+    opacity: 0.2;
+}
+
+.jsr.new {
+    font-weight: bold;
+}
