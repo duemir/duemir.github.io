@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Re-blog - duemir's place</title>
+  <title>How to contribute to eclipse site without a hassle - duemir's place</title>
   <meta name="author" content="Denys Digtiar">
 
   
-  <meta name="description" content="Stuck somewhere in the back of my mind is this idea, that I for some unknown reason MUST have a blog. As if having Twitter, Facebook and Google+ is &hellip;">
+  <meta name="description" content="I am a proponent of an open source software, so I have always been keen to give back. Eclipse IDE being a program which I use almost everyday has &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.duemir.net/blog/2013/04/18/re-blog">
+  <link rel="canonical" href="http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="duemir's place" type="application/atom+xml">
@@ -82,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">Re-blog</h1>
+      <h1 class="entry-title">How to Contribute to Eclipse Site Without a Hassle</h1>
     
     
       <p class="meta">
@@ -98,20 +98,18 @@
   
 
 
-<time datetime="2013-04-18T12:00:00+10:00" pubdate data-updated="true">18/04/13</time>
+<time datetime="2013-09-15T20:54:00+10:00" pubdate data-updated="true">15/09/13</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Stuck somewhere in the back of my mind is this idea, that I for some unknown reason MUST have a blog. As if having <a href="https://twitter.com/duemir">Twitter</a>, <a href="https://www.facebook.com/duemir">Facebook</a> and <a href="https://plus.google.com/117210174858127001323/posts">Google+</a> is not enough to fulfil my sharing needs, not to mention numerous other services I am registered on, such as <a href="https://foursquare.com/user/1638511">foursquare</a>, <a href="http://instagram.com/duemir#">Instagram</a>, <a href="http://au.linkedin.com/in/denysdigtiar/">LinkedIn</a>, <a href="https://coderwall.com/duemir">Coderwall</a> and some Russian clones of previously mentioned. Not that I am using all this junk, at the moment I focus my attention only on Twitter, Instagram, foursquare and LinkedIn. Anyway, I want a blog to try to keep my knowledge organized, to express my opinions and thoughts, to share my experiences and just to own it. OK. Decided! I am doing this blogging thing!!!</p>
+<div class="entry-content"><p>I am a proponent of an open source software, so I have always been keen to give back. Eclipse IDE being a program which I use almost everyday has always been in my list of projects to contribute to. However, I never seem to find enough time to dive deep enough into any of the projects to fix even relatively small bugs. One day I noticed that eclipse web sites are also open sourced and anybody, with enough web development knowledge, can submit patches. That is how I decided to try working a bit on Eclipse sites in my spare time.</p>
 
-<p>Why re-blog than? Because I had a blog on this same URL. Nothing particularly interesting. Nothing that I could not have shared using Twitter, except maybe one post. In this incarnation of the blog I promise to be more conscious of the format and not publish single sentence posts. Therefore, I encourage you to follow me on <a href="https://twitter.com/duemir">Twitter</a> but be aware that I also use it as a medium for sharing my favourite music.</p>
+<p>Most Eclipse projects&#8217; sites are built using another Eclipse project called <a href="http://wiki.eclipse.org/Phoenix">Phoenix</a>. It is written in PHP and basically provides templating and common components for static pages. It requires a bit of copy paste but other than that does not get in the way. Another not so good thing is documentation which is a bit messy and outdated. It also does not describe the setup for local development but gives the idea that everything that is needed is an Apache server and PHP. I did not want to install either of them on my laptop, so I decided to use a virtual machine.</p>
 
-<p>As a conclusion, a little bit about blog structure. I plan to categorize every post in either <strong><em>Work</em></strong> or <strong><em>Life</em></strong> category. <strong><em>Work</em></strong> is everything IT related, <strong><em>Life</em></strong> &ndash; everything else. I will use additional content specific categories but these two are mandatory. In my opinion, this way it will be easy to separate all technical from all non-technical stuff and only read or subscribe to what you are interested in. Speaking of which, links to the category pages are bellow, following are links to RSS: <strong><em><a href="/blog/categories/work/atom.xml">Work</a></em></strong> and <strong><em><a href="/blog/categories/life/atom.xml">Life</a></em></strong>.</p>
-
-<p>That is it. Wait for the first post.</p>
+<p>That is where <a href="http://www.vagrantup.com/">Vagrant</a> and <a href="http://puppetlabs.com/">Puppet</a> come into play and make contributing to eclipse sites hassle free for me and others. I configured a simple Vagrant machine and wrote a small puppet manifest for provisioning an Apache and PHP, which I made freely available on <a href="https://github.com/duemir/eclipse.org-vagrant">my Github</a> (usage notes are in README file). Now if I see something that needs to be fixed on the eclipse site, I can simply clone its repo, run <code>vagrant up</code> and I am ready for coding with instant feedback.</p>
 </div>
 
 
@@ -134,12 +132,12 @@
   
 
 
-<time datetime="2013-04-18T12:00:00+10:00" pubdate data-updated="true">18/04/13</time>
+<time datetime="2013-09-15T20:54:00+10:00" pubdate data-updated="true">15/09/13</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/life/'>Life</a>, <a class='category' href='/blog/categories/work/'>Work</a>
+    <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>, <a class='category' href='/blog/categories/work/'>Work</a>
   
 </span>
 
@@ -148,7 +146,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.duemir.net/blog/2013/04/18/re-blog/" data-via="duemir" data-counturl="http://www.duemir.net/blog/2013/04/18/re-blog/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle/" data-via="duemir" data-counturl="http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -161,8 +159,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/04/18/re-blog/" title="Previous Post: Re-blog">&laquo; Re-blog</a>
       
-        <a class="basic-alignment right" href="/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle/" title="Next Post: How to contribute to eclipse site without a hassle">How to contribute to eclipse site without a hassle &raquo;</a>
       
     </p>
   </footer>

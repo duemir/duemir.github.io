@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[duemir's place]]></title>
-  <link href="http://duemir.net/atom.xml" rel="self"/>
-  <link href="http://duemir.net/"/>
-  <updated>2013-08-05T22:01:52+10:00</updated>
-  <id>http://duemir.net/</id>
+  <link href="http://www.duemir.net/atom.xml" rel="self"/>
+  <link href="http://www.duemir.net/"/>
+  <updated>2014-05-15T20:21:54+10:00</updated>
+  <id>http://www.duemir.net/</id>
   <author>
     <name><![CDATA[Denys Digtiar]]></name>
     
@@ -14,15 +14,28 @@
 
   
   <entry>
+    <title type="html"><![CDATA[How to contribute to eclipse site without a hassle]]></title>
+    <link href="http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle/"/>
+    <updated>2013-09-15T20:54:00+10:00</updated>
+    <id>http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle</id>
+    <content type="html"><![CDATA[<p>I am a proponent of an open source software, so I have always been keen to give back. Eclipse IDE being a program which I use almost everyday has always been in my list of projects to contribute to. However, I never seem to find enough time to dive deep enough into any of the projects to fix even relatively small bugs. One day I noticed that eclipse web sites are also open sourced and anybody, with enough web development knowledge, can submit patches. That is how I decided to try working a bit on Eclipse sites in my spare time.</p>
+
+<p>Most Eclipse projects&#8217; sites are built using another Eclipse project called <a href="http://wiki.eclipse.org/Phoenix">Phoenix</a>. It is written in PHP and basically provides templating and common components for static pages. It requires a bit of copy paste but other than that does not get in the way. Another not so good thing is documentation which is a bit messy and outdated. It also does not describe the setup for local development but gives the idea that everything that is needed is an Apache server and PHP. I did not want to install either of them on my laptop, so I decided to use a virtual machine.</p>
+
+<p>That is where <a href="http://www.vagrantup.com/">Vagrant</a> and <a href="http://puppetlabs.com/">Puppet</a> come into play and make contributing to eclipse sites hassle free for me and others. I configured a simple Vagrant machine and wrote a small puppet manifest for provisioning an Apache and PHP, which I made freely available on <a href="https://github.com/duemir/eclipse.org-vagrant">my Github</a> (usage notes are in README file). Now if I see something that needs to be fixed on the eclipse site, I can simply clone its repo, run <code>vagrant up</code> and I am ready for coding with instant feedback.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Re-blog]]></title>
-    <link href="http://duemir.net/blog/2013/04/18/re-blog/"/>
+    <link href="http://www.duemir.net/blog/2013/04/18/re-blog/"/>
     <updated>2013-04-18T12:00:00+10:00</updated>
-    <id>http://duemir.net/blog/2013/04/18/re-blog</id>
+    <id>http://www.duemir.net/blog/2013/04/18/re-blog</id>
     <content type="html"><![CDATA[<p>Stuck somewhere in the back of my mind is this idea, that I for some unknown reason MUST have a blog. As if having <a href="https://twitter.com/duemir">Twitter</a>, <a href="https://www.facebook.com/duemir">Facebook</a> and <a href="https://plus.google.com/117210174858127001323/posts">Google+</a> is not enough to fulfil my sharing needs, not to mention numerous other services I am registered on, such as <a href="https://foursquare.com/user/1638511">foursquare</a>, <a href="http://instagram.com/duemir#">Instagram</a>, <a href="http://au.linkedin.com/in/denysdigtiar/">LinkedIn</a>, <a href="https://coderwall.com/duemir">Coderwall</a> and some Russian clones of previously mentioned. Not that I am using all this junk, at the moment I focus my attention only on Twitter, Instagram, foursquare and LinkedIn. Anyway, I want a blog to try to keep my knowledge organized, to express my opinions and thoughts, to share my experiences and just to own it. OK. Decided! I am doing this blogging thing!!!</p>
 
 <p>Why re-blog than? Because I had a blog on this same URL. Nothing particularly interesting. Nothing that I could not have shared using Twitter, except maybe one post. In this incarnation of the blog I promise to be more conscious of the format and not publish single sentence posts. Therefore, I encourage you to follow me on <a href="https://twitter.com/duemir">Twitter</a> but be aware that I also use it as a medium for sharing my favourite music.</p>
 
-<p>As a conclusion, a little bit about blog structure. I plan to categorize every post in either <strong><em>Work</em></strong> or <strong><em>Life</em></strong> category. <strong><em>Work</em></strong> is everything IT related, <strong><em>Life</em></strong> &ndash; everything else. I will use additional content specific categories but these two are mandatory. In my opinion, this way it will be easy to separate all technical from all non-technical stuff and only read or subscribe to what you are interested in. Speaking of which, links to the category pages are bellow, following are links to RSS: <strong><em><a href="http://duemir.net/blog/categories/work/atom.xml">Work</a></em></strong> and <strong><em><a href="http://duemir.net/blog/categories/life/atom.xml">Life</a></em></strong>.</p>
+<p>As a conclusion, a little bit about blog structure. I plan to categorize every post in either <strong><em>Work</em></strong> or <strong><em>Life</em></strong> category. <strong><em>Work</em></strong> is everything IT related, <strong><em>Life</em></strong> &ndash; everything else. I will use additional content specific categories but these two are mandatory. In my opinion, this way it will be easy to separate all technical from all non-technical stuff and only read or subscribe to what you are interested in. Speaking of which, links to the category pages are bellow, following are links to RSS: <strong><em><a href="http://www.duemir.net/blog/categories/work/atom.xml">Work</a></em></strong> and <strong><em><a href="http://www.duemir.net/blog/categories/life/atom.xml">Life</a></em></strong>.</p>
 
 <p>That is it. Wait for the first post.</p>
 ]]></content>

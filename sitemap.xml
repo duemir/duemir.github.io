@@ -1,27 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://duemir.net/blog/2013/04/18/re-blog/</loc>
+        <loc>http://www.duemir.net/blog/2013/04/18/re-blog/</loc>
         <lastmod>2013-08-05T21:56:33+10:00</lastmod>
     </url>
     <url>
-        <loc>http://duemir.net/blog/archives/</loc>
+        <loc>
+            http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle/
+        </loc>
+        <lastmod>2013-09-15T21:01:00+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.duemir.net/blog/archives/</loc>
+        <lastmod>2013-09-15T21:01:00+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.duemir.net/talks/</loc>
         <lastmod>2013-08-05T21:56:33+10:00</lastmod>
     </url>
     <url>
-        <loc>http://duemir.net/talks/</loc>
+        <loc>http://www.duemir.net/</loc>
+        <lastmod>2013-09-15T21:01:00+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.duemir.net/about/</loc>
         <lastmod>2013-08-05T21:56:33+10:00</lastmod>
     </url>
     <url>
-        <loc>http://duemir.net/</loc>
-        <lastmod>2013-08-05T21:56:33+10:00</lastmod>
-    </url>
-    <url>
-        <loc>http://duemir.net/about/</loc>
-        <lastmod>2013-08-05T21:56:33+10:00</lastmod>
-    </url>
-    <url>
-        <loc>http://duemir.net/robots.txt</loc>
+        <loc>http://www.duemir.net/robots.txt</loc>
         <lastmod>2013-08-05T21:56:33+10:00</lastmod>
     </url>
 </urlset>

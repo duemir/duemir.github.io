@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://duemir.net/sitemap.xml 
+Sitemap: http://www.duemir.net/sitemap.xml 

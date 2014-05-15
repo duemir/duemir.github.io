@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Eclipse | duemir's place]]></title>
+  <link href="http://www.duemir.net/blog/categories/eclipse/atom.xml" rel="self"/>
+  <link href="http://www.duemir.net/"/>
+  <updated>2014-05-15T20:21:54+10:00</updated>
+  <id>http://www.duemir.net/</id>
+  <author>
+    <name><![CDATA[Denys Digtiar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to contribute to eclipse site without a hassle]]></title>
+    <link href="http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle/"/>
+    <updated>2013-09-15T20:54:00+10:00</updated>
+    <id>http://www.duemir.net/blog/2013/09/15/how-to-contribute-to-eclipse-site-without-a-hassle</id>
+    <content type="html"><![CDATA[<p>I am a proponent of an open source software, so I have always been keen to give back. Eclipse IDE being a program which I use almost everyday has always been in my list of projects to contribute to. However, I never seem to find enough time to dive deep enough into any of the projects to fix even relatively small bugs. One day I noticed that eclipse web sites are also open sourced and anybody, with enough web development knowledge, can submit patches. That is how I decided to try working a bit on Eclipse sites in my spare time.</p>
+
+<p>Most Eclipse projects' sites are built using another Eclipse project called <a href="http://wiki.eclipse.org/Phoenix">Phoenix</a>. It is written in PHP and basically provides templating and common components for static pages. It requires a bit of copy paste but other than that does not get in the way. Another not so good thing is documentation which is a bit messy and outdated. It also does not describe the setup for local development but gives the idea that everything that is needed is an Apache server and PHP. I did not want to install either of them on my laptop, so I decided to use a virtual machine.</p>
+
+<p>That is where <a href="http://www.vagrantup.com/">Vagrant</a> and <a href="http://puppetlabs.com/">Puppet</a> come into play and make contributing to eclipse sites hassle free for me and others. I configured a simple Vagrant machine and wrote a small puppet manifest for provisioning an Apache and PHP, which I made freely available on <a href="https://github.com/duemir/eclipse.org-vagrant">my Github</a> (usage notes are in README file). Now if I see something that needs to be fixed on the eclipse site, I can simply clone its repo, run <code>vagrant up</code> and I am ready for coding with instant feedback.</p>
+]]></content>
+  </entry>
+  
+</feed>
